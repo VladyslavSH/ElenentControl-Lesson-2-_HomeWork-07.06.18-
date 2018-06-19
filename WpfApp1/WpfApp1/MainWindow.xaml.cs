@@ -42,12 +42,17 @@ namespace WpfApp1
                     bitMap.UriSource = new Uri(item, UriKind.Absolute);
                     bitMap.EndInit();
                     Button button = new Button();
+                    button.Click += ButtonImage_Click;
                     Image image = new Image();
                     image.Source = bitMap;
                     button.Content = image;
                     stack.Children.Add(button);
                 }
             }
+        }
+        private void ButtonImage_Click(object sender, RoutedEventArgs e)
+        {
+            image.Source = ((sender as Button).Content as Image).Source;
         }
     }
 }

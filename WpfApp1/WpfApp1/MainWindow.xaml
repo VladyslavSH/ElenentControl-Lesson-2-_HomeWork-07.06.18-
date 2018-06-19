@@ -18,9 +18,14 @@
         <DockPanel LastChildFill="False">
             <Button DockPanel.Dock="Left" Width="50" Margin="4" BorderBrush="White" Background="LightYellow" FontSize="10" Click="Button_Click">Open</Button>
         </DockPanel>
-        <StackPanel Name="stack" Grid.Column="1" Grid.Row="1">
-            
-        </StackPanel>
+        <ScrollViewer Grid.Column="1" Grid.Row="1">
+            <StackPanel Name="stack" Grid.Column="1" Grid.Row="1" >
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer Grid.Row="1">
+            <Image Name="image"></Image>
+        </ScrollViewer>
         <TextBlock Name="FileName" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" ></TextBlock>
+        <Slider Grid.Row="1" VerticalAlignment="Bottom" Width="360" HorizontalAlignment="Left" Margin="5" Value="{Binding ElementName=image, Path=Width}" Maximum="1000"></Slider>
     </Grid>
 </Window>
