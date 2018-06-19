@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="350" Width="525" WindowStyle="ThreeDBorderWindow">
+    <Grid Background="LightYellow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="130"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <DockPanel LastChildFill="False">
-            <Button DockPanel.Dock="Left" Width="50" Margin="5"></Button>
+            <Button DockPanel.Dock="Left" Width="50" Margin="4" BorderBrush="White" Background="LightYellow" FontSize="10" Click="Button_Click">Open</Button>
         </DockPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <ListBox Name="imageList" BorderBrush="LightYellow" ScrollViewer.VerticalScrollBarVisibility="Auto" ></ListBox>
+        </StackPanel>
+        <TextBlock Name="FileName" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" ></TextBlock>
     </Grid>
 </Window>
